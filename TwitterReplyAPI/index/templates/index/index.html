@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Reply API</title>
+	{% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/Navbar-Centered.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
+</head>
+
+<body>
+    <nav class="navbar navbar-default navigation-clean">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li {% if activate == 'index' %}class="active"{% endif %} role="presentation"><a class="text-uppercase" href="http://127.0.0.1:8000" style="font-family:'Source Sans Pro', sans-serif;">Home </a></li>
+                    <li class="dropdown"><a class="text-uppercase dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#" style="font-family:'Source Sans Pro', sans-serif;">API Tutorial <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li role="presentation"><a class="text-uppercase" href="#" style="font-family:'Source Sans Pro', sans-serif;">Setting Up API</a></li>
+                            <li role="presentation"><a class="text-uppercase" href="#" style="font-family:'Source Sans Pro', sans-serif;">How to Use</a></li>
+                            <li role="presentation"><a class="text-uppercase" href="#" style="font-family:'Source Sans Pro', sans-serif;">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li role="presentation"><a class="text-uppercase" href="#" style="font-family:'Source Sans Pro', sans-serif;">Pricing </a></li>
+                    <li role="presentation"><a class="text-uppercase" href="#" style="font-family:'Source Sans Pro', sans-serif;">Contact </a></li>
+                    <li role="presentation">
+                        <a class="text-uppercase" href="#" style="font-family:'Source Sans Pro', sans-serif;"> </a>
+                    </li>
+                    <li role="presentation"><a class="text-uppercase" href="#" style="font-family:'Source Sans Pro', sans-serif;">Login</a></li>
+                    <li role="presentation"><a class="text-uppercase" href="#" style="font-family:'Source Sans Pro', sans-serif;">Register </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="{% static 'assets/js/jquery.min.js ' %}"> </script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js ' %}"> </script>
+	
+	
+	<div>
+	   {% block content %}
+	   {% endblock %}	
+	</div>
+</body>
+
+</html>
